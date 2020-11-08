@@ -1,5 +1,5 @@
 import sys 
-def safe_input(f=None, prompt=""):
+def safe_input(prompt=""):
 
     # Case:  Stdin
     if f is sys.stdin or f is None:
