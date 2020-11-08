@@ -1,7 +1,7 @@
 import sys 
-prompt = "what times are you available to study?"
-input= 
-prompt1= "Enter your assignments and time required for that assignment"
+prompt = input("what times are you available to study?")
+prompt0= input("How many assignments do you have?)
+prompt1= input("Enter your assignments and time required for that assignment")
 
 def safe_input(prompt="", list(prompt1)):
 
