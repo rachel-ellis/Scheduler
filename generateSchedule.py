@@ -17,5 +17,20 @@ def main():
 		currentHour += 1
 	currentMin = 0
 
+	
+def calcPriorities(tasks, daysLeft, hoursNeeded):
+
+	ratio = [i / j for i, j in zip(daysLeft, hoursNeeded)]
+	sortedRatio = ratio.sorted(reverse=True)
+
+	orderedTasks = []
+
+	for i in range(len(ratio)):
+		for j in range(len(sortedRatio)):
+			if ratio[i] == sortedRatio[j]:
+				orderedTasks.append(task[j])
+	return orderedTasks
+
+
 if__name__== " main ":
 	main()
