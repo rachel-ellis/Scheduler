@@ -20,11 +20,19 @@ def main():
 	
 def calcPriorities(tasks, daysLeft, hoursNeeded):
 
-	ratio = [i / j for i, j in zip(daysLeft, hoursNeeded)]
-	sortedRatio = ratio.sorted(reverse=True)
-
 	orderedTasks = []
 
+	# first prioritize things due today
+	for i in range(len(daysLeft)):
+		if daysLeft[i] == 1:
+			orderedTasks.append(tasks[i])
+			tasks.pop(i)
+			daysLeft.pop(i)
+			hoursNeeded.pop(i)
+
+	ratio = [i / j for i, j in zip(hoursNeeded, daysLeft)]
+	sortedRatio = sorted(ratio, reverse=True)
+	
 	for i in range(len(ratio)):
 		for j in range(len(sortedRatio)):
 			if ratio[i] == sortedRatio[j]:
