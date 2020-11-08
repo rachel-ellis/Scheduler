@@ -1,5 +1,5 @@
-import test.py
-# not sure how inputs are being handled in test.py
+import input.py
+# not sure how inputs are being handled in input.py
 
 from datetime import datetime
 
@@ -17,6 +17,5 @@ def main():
 		currentHour += 1
 	currentMin = 0
 
-  
 if__name__== " main ":
 	main()
